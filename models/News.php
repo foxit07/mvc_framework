@@ -28,8 +28,9 @@ class News
         }
     }
 
+
     /**
-     *
+     * @return array
      */
     public static function getNewsList()
     {

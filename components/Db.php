@@ -10,6 +10,9 @@
 class Db
 {
 
+    /**
+     * @return PDO
+     */
     public static function getConnection()
     {
 

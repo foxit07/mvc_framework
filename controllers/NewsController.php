@@ -12,6 +12,7 @@ include_once (ROOT . '/models/News.php');
 class NewsController
 {
 
+
     public function actionIndex()
     {
 

@@ -7,6 +7,8 @@
  * Time: 12:43
  */
 
+
+
 return array(
     'host'=>'localhost',
     'dbname'=>'mvc_site',

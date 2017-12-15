@@ -12,6 +12,9 @@ class Router
 
     private $routes;
 
+    /**
+     * Router constructor.
+     */
     public  function __construct()
     {
 
@@ -19,6 +22,9 @@ class Router
         $this->routes = include($routesPath);
     }
 
+    /**
+     * @return string
+     */
     private function getURI()
     {
 
@@ -26,6 +32,10 @@ class Router
             return trim($_SERVER['REQUEST_URI'],'/');
         }
     }
+
+    /**
+     * Запуск приложения
+     */
     public function run()
     {
         //Получить строку запроса
@@ -38,7 +48,6 @@ class Router
 
                //Получаем внутренний путь
                $internalRoute = preg_replace("#$uriPattern#", $path, $uri);
-
 
                //Определить какой контроллер и экшн обрабатывают запрос и параметры
                $segment = explode('/',$internalRoute);
