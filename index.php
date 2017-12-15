@@ -16,9 +16,8 @@ error_reporting(E_ALL);
 //2.Подключение файлов системы
 define('ROOT', dirname( __FILE__));
 require_once (ROOT . '/components/Router.php');
-
-
 //3. Подключение к базе данных
+require_once (ROOT . '/components/Db.php');
 
 //4. Вызов Router
 $router = new Router();

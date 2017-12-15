@@ -7,21 +7,27 @@
  * Time: 19:06
  */
 
+include_once (ROOT . '/models/News.php');
+
 class NewsController
 {
 
     public function actionIndex()
     {
 
-        echo 'Список новостей';
+        $newsList = array();
+        $newsList = News::getNewsList();
+
+        require_once (ROOT . '/views/news/index.php');
+
         return true;
+
     }
 
-    public function actionView($category, $id)
+    public function actionView($id)
     {
-
-        echo $category . $id;
-        echo 'Просмотр одной новости';
+        echo '<pre>';
+        print_r(News::getNewsItemById($id));
         return true;
     }
 }
