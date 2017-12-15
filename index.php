@@ -21,3 +21,5 @@ require_once (ROOT . '/components/Router.php');
 //3. Подключение к базе данных
 
 //4. Вызов Router
+$router = new Router();
+$router->run();
